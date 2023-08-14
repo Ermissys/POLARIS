@@ -1,0 +1,31 @@
+:root{
+    --color-red: #9C1113;
+    --color-dred: #400708;
+    --color-dred¹: #1A0202;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 0.7vw;
+
+    position: absolute;
+
+    background-color: var(--color-dred¹);
+}
+
+::-webkit-scrollbar-thumb{
+    width: 0.5vw;
+
+    position: absolute;
+
+    border-radius: 10px;
+
+    background-color: var(--color-red);
+}

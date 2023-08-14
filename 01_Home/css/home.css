@@ -1,0 +1,211 @@
+/*padrão*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root{
+    --color-red: #9C1113;
+    --color-dred: #400708;
+    --color-dred¹: #1A0202;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+
+    color: var(--color-white);
+    background-color: var(--color-dred¹);
+}
+
+/*padrão*/
+
+main{
+    transition: 1s;
+}
+
+/*Texto Superior*/
+
+.title{
+    font-size: 2vw;
+    padding-top: 5vw;
+    text-align: center;
+
+    cursor: default;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 1vw;
+    padding-top: 1vw;
+    padding-bottom: 7vw;
+
+    cursor: default;
+}
+
+.area-1{
+    visibility: hidden;
+}
+
+/*Texto Superior*/
+
+/*Cards*/
+
+.cards{
+    display: grid;
+
+    margin: 0 5vw;
+
+    justify-content: center;
+    align-items: center;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    cursor: default;
+}
+
+.cards:first-child{
+    margin-left: 0;
+}
+
+.card{
+    display: flex;
+
+    margin-left: 2vw;
+    margin-bottom: 3vw;
+
+    padding: 0.5vw;
+
+    border-radius: 10px;
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background-color: #9C1113;
+}
+
+.card:hover{
+    opacity: 50%;
+
+    transition: 0.2s;
+}
+
+.card div.icon{
+    width: 5vw;
+
+    margin: 0 5vw;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card button{
+    margin: 0.5vw;
+    padding: 1vw;
+
+    border-radius: 10px;
+    border: none;
+
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-family: 'Quicksand';
+
+    cursor: pointer;
+
+    background-color: var(--color-dred);
+    color: var(--color-white);
+}
+
+.card span{
+    margin: 1vw;
+}
+
+.card p{
+    margin-bottom: 0.5vw;
+
+    opacity: 50%;
+
+    font-size: 0.8vw;
+}
+
+.card h3{
+    text-transform: uppercase;
+
+    margin: 0.8vw;
+}
+
+/*Cards*/
+
+@media (max-width: 768px) {
+    
+/*Texto Superior*/
+
+    .title{
+        font-size: 5vw;
+    }
+
+    .subtitle{
+        font-size: 4vw;
+    }
+
+/*Texto Superior*/
+
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card div.icon{
+        width: 10vw;
+    
+        margin: 0 5vw;
+    }
+    
+    .card img{
+        width: 100%;
+    }
+    
+    .card button{
+        margin: 0.5vw;
+        padding: 2vw;
+    
+        font-size: 1.8vw;
+    }
+
+    .card span{
+        font-size: 2vw;
+    }
+    
+    .card p{
+        opacity: 50%;
+    
+        font-size: 1vw;
+    }
+
+}
+
+@media (max-width: 426px){
+
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card span{
+        font-size: 4.5vw;
+    }
+
+    .card p{
+        font-size: 3vw;
+    }
+
+
+}

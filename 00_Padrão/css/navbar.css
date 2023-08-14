@@ -1,0 +1,169 @@
+/*padrão*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root{
+    --color-red: #9C1113;
+    --color-dred: #400708;
+    --color-dred¹: #1A0202;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+
+    color: var(--color-white);
+    background-color: var(--color-dred¹);
+}
+
+/*padrão*/
+
+header{
+    padding: 1% 2% 1% 2%;
+
+    border-radius: 0 0 10px 10px;
+
+    background-color: var(--color-red);
+    box-shadow: 1px 1px 4px var(--color-black);
+
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.img_logo{
+    width: 4vw;
+    height: 4vw;
+
+    filter: invert(1);
+}
+
+.nav_header{
+    font-size: 1.2vw;
+
+    z-index: 2;
+
+    display: flex;
+    gap: 1.5vw;
+}
+
+/*NAV_HEADER TRANSFORMATIONS*/
+
+      .nav_header a{
+        text-decoration: none;
+
+        color: var(--color-white);
+
+        transition: 0.5s;
+     }
+
+      .nav_header a:hover{
+        padding: 1.5%;
+
+        border-radius: 10px;
+        
+        opacity: 0.8;
+
+        background-color: var(--color-dred);
+     }
+
+/*NAV_HEADER TRANSFORMATIONS*/
+
+/*MENU*/
+
+      .btn_icon_header{
+        width: 2vw;
+        height: 2vw;
+
+        border: none;
+
+        background-color: transparent;
+
+        align-items: center;
+        display: none;
+     }
+
+      .btn_icon_header img{
+        width: 1.5vw;
+        height: 1.5vw;
+
+        filter: invert(1);
+     }
+
+/*MENU*/
+
+/*MEDIA SCREEN*/
+
+@media screen and (max-width: 768px){
+
+/*MENU*/
+
+       .img_logo{
+        width: 8vw;
+        height: 8vw;
+     }
+
+       .btn_icon_header{
+        width: 10vw;
+        height: 10vw;
+
+        align-items: center;
+        display: flex;
+
+        cursor: pointer;
+     }
+
+       .btn_icon_header img{
+        width: 6.5vw;
+        height: 6.5vw;
+     }
+
+       .nav_header{
+        width: 35vw;
+        height: 100%;
+
+        padding: 2.5vw;
+        margin-left: -100vw;
+
+        position: absolute;
+
+        top: 0;
+
+        background-color: var(--color-dred);
+        box-shadow: 3px 1px 5px var(--color-black) ;
+
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+
+        animation-duration: 1s;
+     }
+
+       .nav_header a{
+        font-size: 4vw;
+
+        margin-top: 2vw;
+     }
+
+     @keyframes showSidebar {
+        from {margin-left: -100vw;}
+        top {margin-left: -2vw;}
+     }
+
+     @keyframes closeSidebar {
+        from {margin-left: -2vw;}
+        top {margin-left: -100vw;}
+     }
+
+/*MENU*/
+
+}
+
+/*MEDIA SCREEN*/

@@ -1,0 +1,179 @@
+/*padrão*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root{
+    --color-red: #9C1113;
+    --color-dred: #400708;
+    --color-dred¹: #1A0202;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+
+    color: var(--color-white);
+    background-color: var(--color-dred¹);
+}
+
+/*padrão*/
+
+.login{
+    padding: 10vw 5vw 10vw 5vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    visibility: hidden;
+}
+
+.left-login{
+    font-size: 1.1vw;
+}
+
+.left-login img{
+    width: 30vw;
+
+    justify-content: center;
+}
+
+.right-login{
+    width: 30vw;
+
+    padding: 1vw;
+
+    border-radius: 10px;
+
+    background-color: var(--color-red);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.right-login h1{
+    padding-bottom: 1vw;
+
+    font-size: 2.5vw;
+
+    color: var(--color-black);
+}
+
+.textfield{
+    padding-top: 2%;
+
+    font-size: 1.5vw;
+}
+
+.right-login input{
+    width: 100%;
+
+    font-size: 1.5vw;
+
+    padding: 2%;
+    margin-top: 2%;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+
+    color: var(--color-white);
+    background-color: var(--color-dred);
+}
+
+.right-login button{
+    width: 100%;
+
+    font-size: 1.5vw;
+
+    padding: 2%;
+    margin-top: 1vw;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+
+    color: var(--color-white);
+    background-color: var(--color-dred¹);
+
+    transition: 0.5s;
+}
+
+.right-login button:hover{
+    opacity: 0.8;
+}
+
+.right-login a{
+    text-decoration: none;
+
+    font-size: 1.5vw;
+
+    color: var(--color-dred¹);
+
+    transition: 0.5s;
+}
+
+.right-login a:hover{
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+
+    .login{
+        padding: 10vw 5vw 10vw 5vw;
+    
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-login{
+        font-size: 2.1vw;
+
+        text-align: center;
+    }
+
+    .left-login img{
+        width: 40vw;
+    }
+
+    .right-login{
+        width: 80vw;
+
+        margin-top: 5vw;
+    }
+
+    .right-login h1{
+        font-size: 5vw;
+    }
+
+    .textfield{
+        font-size: 3vw;
+    }
+    
+    .right-login input{
+        font-size: 3vw;
+    }
+
+    .right-login button{
+        font-size: 3vw;
+    }
+
+    .right-login a{
+        font-size: 3vw;
+    }
+
+}
